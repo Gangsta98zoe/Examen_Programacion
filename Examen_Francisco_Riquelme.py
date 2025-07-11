@@ -45,10 +45,10 @@ def actualizar_precio(modelo, p):
 while True:
     print("\n*** MENU PRINCIPAL ***")
     print("1. Stock marca.")
-    print("2. Búsqueda por precio.")
-    print("3. Actualizar precio.")
+    print("2. Busqueda por precio.")
+    print("3. actualizar precio.")
     print("4. Salir.")
-    opcion = input("Ingrese opción: ")
+    opcion = input("Ingrese opción ")
     if opcion == '1':
         marca = input("Ingrese marca a consultar: ")
         stock_marca(marca)
@@ -56,10 +56,10 @@ while True:
         while True:
             try:
                 p_min = int(input("Ingrese precio mínimo: "))
-                p_max = int(input("Ingrese precio máximo: "))
+                p_max = int(input("Ingrese precio máximo "))
                 break
             except ValueError:
-                print("Debe ingresar valores enteros!!")
+                print("Debe ingresar valores enteros")
         busqueda_precio(p_min, p_max)
     elif opcion == '3':
         while True:
@@ -68,16 +68,16 @@ while True:
                 nuevo_precio = int(input("Ingrese precio nuevo: "))
                 actualizado = actualizar_precio(modelo, nuevo_precio)
                 if actualizado:
-                    print("Precio actualizado!!")
+                    print("Precio actualizado")
                 else:
-                    print("El modelo no existe!!")
+                    print("El modelo no existe")
             except ValueError:
                 print("Debe ingresar un precio válido.")
             continuar = input("Desea actualizar otro precio (s/n)?: ").lower()
             if continuar != "si":
                 break
     elif opcion == '4':
-        print("Programa finalizado.")
+        print("Prograa finalizado.")
         break
     else:
-        print("Debe seleccionar una opción válida!!")
+        print("Debe selecconar una opción válida!!")
